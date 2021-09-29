@@ -4,11 +4,21 @@
   padding-top: 135px;
 }
 
+/* General */
+
+.about,
+.projects,
+.contact,
+.footer {
+  display: block;
+  text-align: center;
+}
+
+
 /* Navbar  */
 
 .navbar-wrapper {
   font-weight: 600;
-  box-shadow: 0 3px 2px -2px hsla(0, 3%, 80%, 0.161);
   display: block;
   margin: 0;
   padding: 0;
@@ -76,30 +86,62 @@
     border-top: 0.2em solid #fff;
 }
 
+/* About */
+
+
+
 /* Contact */
-
-.contact-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 36em;
-}
-
-.contact-form {
-  display: block;
-  text-align: center;
-}
 
 .subject,
 .user_name,
 .email {
   margin: 5px;
-  border-radius: 6px;
   min-width: 440px;
+  border: 1px solid lightgray;
 }
 
 .message {
   min-width: 440px;
   min-height: 220px;
   margin: 5px;
-  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+@media screen and (max-width: 560px) {
+.subject,
+.user_name,
+.email {
+  min-width: 340px;
+}
+
+.message {
+  min-width: 340px;
+  min-height: 170px;
+}
+}
+
+@media screen and (max-width: 370px) {
+.subject,
+.user_name,
+.email {
+  min-width: 280px;
+}
+
+.message {
+  min-width: 280px;
+  min-height: 140px;
+}
+}
+
+@media screen and (max-width: 310px) {
+.subject,
+.user_name,
+.email {
+  min-width: 220px;
+}
+
+.message {
+  min-width: 220px;
+  min-height: 110px;
+}
 }
