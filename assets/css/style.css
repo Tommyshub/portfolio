@@ -90,6 +90,108 @@
 
 
 
+/* Projects */
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  border-radius: 18px;
+  background: lightgray;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  font-family: roboto;
+  text-align: center;
+}
+
+.card-text {
+  grid-area: text;
+}
+
+.card-links {
+  grid-area: links;
+}
+
+.card-image {
+  grid-area: image;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.card-links {
+  grid-area: stats; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-top: 1px solid lightgray;
+}
+
+.card-links .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.card {
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+}
+
+.card-links a {
+  color:black;
+  font-size: 2.2em;
+}
+
+.card-links a:hover {
+  color:blue;
+}
+
+@media screen and (max-width: 1450px){
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 730px){
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 380px){
+  .card {
+    grid-template-columns: 220px;
+    grid-template-rows: 130px 130px 80px;
+  }
+  .card-links a {
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 270px){
+  .card {
+    grid-template-columns: 190px;
+    grid-template-rows: 130px 130px 90px;
+  }
+  .card-links a {
+    font-size: 1.6em;
+  }
+}
+
 /* Contact */
 
 .subject,
@@ -97,51 +199,116 @@
 .email {
   margin: 5px;
   min-width: 440px;
-  border: 1px solid lightgray;
+  border: none;
 }
 
 .message {
   min-width: 440px;
   min-height: 220px;
   margin: 5px;
-  border: 1px solid lightgray;
+  border: none;
+}
+
+.contact-container {
+  background-color: lightgray;
+  padding: 20px;
+  margin: auto;
+  width: 460px;
+  border-radius: 12px;
 }
 
 @media screen and (max-width: 560px) {
-.subject,
-.user_name,
-.email {
-  min-width: 340px;
+  .subject,
+  .user_name,
+  .email {
+    min-width: 340px;
+  }
+
+  .message {
+    min-width: 340px;
+    min-height: 170px;
+  }
+  .contact-container  {
+    width: 360px;
+  }
 }
 
-.message {
-  min-width: 340px;
-  min-height: 170px;
-}
+@media screen and (max-width: 440px) {
+  .subject,
+  .user_name,
+  .email {
+    min-width: 300px;
+  }
+
+  .message {
+    min-width: 300px;
+    min-height: 150px;
+  }
+  .contact-container  {
+    width: 320px;
+  }
 }
 
-@media screen and (max-width: 370px) {
-.subject,
-.user_name,
-.email {
-  min-width: 280px;
+@media screen and (max-width: 380px) {
+  .subject,
+  .user_name,
+  .email {
+    min-width: 280px;
+  }
+
+  .message {
+    min-width: 280px;
+    min-height: 140px;
+  }
+  .contact-container  {
+    width: 300px;
+  }
 }
 
-.message {
-  min-width: 280px;
-  min-height: 140px;
-}
+@media screen and (max-width: 360px) {
+  .subject,
+  .user_name,
+  .email {
+    min-width: 200px;
+  }
+
+  .message {
+    min-width: 200px;
+    min-height: 100px;
+  }
+  .contact-container  {
+    width: 220px;
+  }
 }
 
-@media screen and (max-width: 310px) {
-.subject,
-.user_name,
-.email {
-  min-width: 220px;
+@media screen and (max-width: 280px) {
+  .subject,
+  .user_name,
+  .email {
+    min-width: 160px;
+  }
+
+  .message {
+    min-width: 177px;
+    min-height: 80px;
+  }
+  .contact-container  {
+    width: 190px;
+  }
 }
 
-.message {
-  min-width: 220px;
-  min-height: 110px;
-}
+@media screen and (max-width: 244px) {
+  .subject,
+  .user_name,
+  .email {
+    width: 120px;
+  }
+
+  .message {
+    min-width: 160px;
+    min-height: 80px;
+  }
+  .contact-container  {
+    width: 170px;
+  }
 }
