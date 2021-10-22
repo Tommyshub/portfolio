@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/534085f43d.js"
       crossorigin="anonymous"
     ></script>
+    <!-- jQuery -->
     <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
     ></script>
-    <script type="text/javascript">
+    <!-- EmailJS -->
+    <script src="assets/js/sendEmail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
       (function () {
         emailjs.init("user_jupzGrAs0kDDQkcsK1TQl");
       })();
@@ -151,7 +157,12 @@
         </p>
       </div>
       <div class="contact-container">
-        <form class="contact-form">
+        <form
+          class="contact-form"
+          action="contact"
+          method="POST"
+          onsubmit="return sendMail(this);"
+        >
           <input
             type="text"
             class="subject"
@@ -187,7 +198,10 @@
         </form>
       </div>
     </section>
-    <div class="empty"></div>
-    <script src="assets/js/sendEmail.js"></script>
+    <div class="empty">
+      <div id="messageContainer" class="message-container">
+        <p class="toast"></p>
+      </div>
+    </div>
   </body>
 </html>

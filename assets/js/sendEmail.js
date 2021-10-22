@@ -17,7 +17,7 @@ function sendMail(contactForm) {
         // Create new div for content to be displayed in
         $(document).ready(function () {
           $(
-            '<p id="messageParagraph" class="toast light-green black-text">Email successfully sent!</p>'
+            '<p id="messageParagraph" class="toast success">Email successfully sent!</p>'
           ).appendTo("#messageContainer");
         });
         // Set a timeout of 4 seconds and the remove the newDiv
@@ -32,7 +32,7 @@ function sendMail(contactForm) {
         // Create new div for content to be displayed in
         $(document).ready(function () {
           $(
-            '<p id="messageParagraph" class="toast red darken-1 black-text">Email could not be sent!</p>'
+            '<p id="messageParagraph" class="toast error">Email could not be sent!</p>'
           ).appendTo("#messageContainer");
         });
         // Set a timeout of 4 seconds and the remove the newDiv
