@@ -9,6 +9,15 @@
       src="https://kit.fontawesome.com/534085f43d.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_jupzGrAs0kDDQkcsK1TQl");
+      })();
+    </script>
     <title>Tommy's Portfolio</title>
   </head>
   <body>
@@ -16,24 +25,32 @@
     <div class="navbar-wrapper">
       <nav class="navbar">
         <ul class="nav-ul navbar-links">
-          <li class="nav-links"><a href="#about">ABOUT</a></li>
-          <li class="nav-links"><a href="#contact">CONTACT</a></li>
+          <li class="nav-links"><a href="#about">HOME</a></li>
           <li class="nav-links"><a href="#projects">PROJECTS</a></li>
+          <li class="nav-links"><a href="#contact">CONTACT</a></li>
         </ul>
-        <div id="burger-menu" class="burger-menu">
-          <span class="hamburger"></span> Menu
-        </div>
       </nav>
     </div>
-    <div class="empty"></div>
     <!-- About Page -->
     <div class="about-container">
-      <section class="about" id="about"></section>
+      <section class="about" id="about">
+        <div class="about-text">
+          <h2 class="about-name">Hello, my name is Tommy.</h2>
+          <p class="about-paragraph">
+            I'm a junior full stack web developer from Sweden, but I currently
+            live in Germany. <br />
+            I recently graduated from a coding bootcamp and I am now looking for
+            my first opportunity.
+          </p>
+        </div>
+      </section>
     </div>
-    <div class="empty"></div>
     <!-- My Projects -->
     <div class="projects-container">
       <section class="projects" id="projects">
+        <div class="project-text">
+          <p>This is a few of the projects that I have made</p>
+        </div>
         <div class="card-container">
           <div class="card">
             <div class="card-image card-image1">
@@ -45,7 +62,7 @@
             <div class="card-text">
               <h3>the greenhouse</h3>
               <p>
-                A full featured food delivery website with a stripe payments
+                A full featured food delivery website with stripe payments
                 included, built with Django.
               </p>
             </div>
@@ -122,35 +139,17 @@
               </div>
             </div>
           </div>
-          <div class="card">
-            <div class="card-image">
-              <img src="assets/imgs/hotel.jpg" alt="Fantasy Hotel Image" />
-            </div>
-            <div class="card-text">
-              <h3>Currently Working On</h3>
-              <p>
-                A full featured hotel website with a booking system, built with
-                VueJS.
-              </p>
-            </div>
-            <div class="card-links">
-              <div class="link">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </div>
-              <div class="link">
-                <a href="#"><i class="fab fa-github"></i></a>
-              </div>
-              <div class="link">
-                <a href="#"><i class="fas fa-globe"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div>
-    <div class="empty"></div>
     <!-- Contact Page -->
     <section class="contact" id="contact">
+      <div class="contact-text">
+        <p>
+          You can contact me here if you wish to hire me or collaborate on a
+          project.
+        </p>
+      </div>
       <div class="contact-container">
         <form class="contact-form">
           <input
@@ -184,12 +183,11 @@
             placeholder="message"
           ></textarea>
           <br />
-          <input class="submit-button" type="submit" value="Send" />
+          <input class="submit-button" type="submit" value="SUBMIT" />
         </form>
       </div>
     </section>
     <div class="empty"></div>
-    <script src="assets/js/navbar.js"></script>
     <script src="assets/js/sendEmail.js"></script>
   </body>
 </html>
