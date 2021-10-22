@@ -62,28 +62,29 @@ body {
 @media screen and (max-width: 460px) {
   .navbar-links a {
     font-size: 1.1em;
-    margin: 8px;
+    margin: 10px;
   }
 }
 
 @media screen and (max-width: 370px) {
   .navbar-links a {
     font-size: 0.8em;
-    margin: 4px;
+    margin: 6px;
   }
 }
 
 @media screen and (max-width: 270px) {
   .navbar-links a {
     font-size: 0.7em;
-    margin: 2px;
+    margin: 4px;
   }
 }
 
 /* About */
 
 .about-container {
-  background: url("../imgs/hamburg.jpg") fixed no-repeat;
+  background: url("https://res.cloudinary.com/djeqvj0n3/image/upload/v1634920764/hamburg_x6yuum.jpg")
+    fixed;
   box-shadow: inset 0 0 0 1200px rgba(0, 0, 0, 0.8);
   background-size: cover;
   height: 980px;
@@ -459,6 +460,7 @@ body {
   color: #ffffff;
   border-radius: 30px;
   padding: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .error {
@@ -467,4 +469,5 @@ body {
   color: #ffffff;
   border-radius: 30px;
   padding: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
