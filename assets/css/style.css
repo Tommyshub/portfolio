@@ -120,6 +120,7 @@ body {
   }
   .about-paragraph {
     margin-top: 10px;
+    font-size: 80%;
     width: 90%;
   }
 }
